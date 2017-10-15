@@ -1,4 +1,12 @@
 {
+  "name": "vue-spa-template",
+  "version": "0.9.1",
+  "description": "Simple template for use as base to new SPA project.",
+  "author": {
+    "name": "Lukasz Strzyzowski",
+    "url": "https://github.com/Ranmus",
+    "email": "lukaszstr@gmail.com"
+  },
   "scripts": {
     "build": "webpack",
     "dev": "webpack-dev-server",
