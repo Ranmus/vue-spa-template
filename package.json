@@ -2,7 +2,7 @@
   "scripts": {
     "build": "webpack",
     "dev": "webpack-dev-server",
-    "testcafe": "./node_modules/testcafe/bin/testcafe-with-v8-flag-filter.js"
+    "test:functional": "./node_modules/testcafe/bin/testcafe-with-v8-flag-filter.js"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
