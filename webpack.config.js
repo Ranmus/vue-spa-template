@@ -15,9 +15,15 @@ module.exports = () => {
         vue$: 'vue/dist/vue.esm.js',
       },
       extensions: ['*', '.js', '.vue'],
+      modules: ['node_modules', '*'],
     },
     module: {
       rules: [
+        {
+          test: /\.(js|vue)$/,
+          enforce: 'pre',
+          loader: 'eslint-loader',
+        },
         {
           test: /\.js$/i,
           exclude: /node_modules/,

@@ -1,7 +1,8 @@
 import Vue from 'vue';
 import Application from './components/Application';
 
-const app = new Vue({
+/* eslint-disable no-new */
+new Vue({
   el: '#app',
-  render: (h) => h(Application),
+  render: h => h(Application),
 });

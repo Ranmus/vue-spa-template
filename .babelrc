@@ -1,5 +1,5 @@
 {
-  "presets": ["stage-2",     ["env", {
+  "presets": ["stage-2", ["env", {
     "targets": {
       "chrome": 50,
       "ie": 11,
