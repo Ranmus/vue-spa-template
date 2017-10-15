@@ -1,0 +1,16 @@
+{
+  "presets": ["stage-2",     ["env", {
+    "targets": {
+      "chrome": 50,
+      "ie": 11,
+      "edge": 12,
+      "firefox": 50,
+      "ios": 10,
+      "safari": 10
+    },
+    "debug": false,
+    "modules": false,
+    "useBuiltIns": true
+  }]
+]
+}
