@@ -16,11 +16,12 @@ This is clean template for use as a base to new SPA project.
  * [TODO] Inline CSS styles in development mode due for hot reloading,
  * [TODO] Paths aliasing for components, mixins, filters etc.,
  * [TODO] Webpack Dashboard,
+ * [TODO] Docs custom block in Vue files,
  * [TODO] Vue-router,
  * [TODO] Vuex,
  * [TODO] Simple translation mechanism (trans filter and global method) with use of yaml files as dictionaries,
 
 ## Usage
-___npm run dev___ - Run project in development mode with hot reloading support,
-___npm run build___ - Build project (to **compiled** directory)
-___npm run test:functional [browser] [path_to_test_file]___ - Run given functional test (Testcafe)
+ * ___npm run dev___ - Run project in development mode with hot reloading support,
+ * ___npm run build___ - Build project (to **compiled** directory)
+ * ___npm run test:functional [browser] [path_to_test_file]___ - Run given functional test (Testcafe)

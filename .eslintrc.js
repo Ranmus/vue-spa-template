@@ -10,6 +10,7 @@ module.exports = {
   },
   extends: [
     'airbnb-base',
+    'plugin:testcafe/recommended',
   ],
   plugins: [
     'html',

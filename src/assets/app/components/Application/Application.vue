@@ -1,16 +1,16 @@
 <template lang="pug">
 div
-  test
+  example(:bold="true") This is example component!
 </template>
 
 <style lang="stylus" src="./Application.styl"></style>
 
 <script>
-import Test from '../Test';
+import Example from '../Example';
 
 export default {
   components: {
-    Test,
+    Example,
   },
 };
 </script>
