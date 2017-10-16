@@ -1,5 +1,5 @@
 # Vue SPA Template
-This is clean template for use as base to new SPA project.
+This is clean template for use as a base to new SPA project.
 
 ## Current Setup:
  * Webpack for bundling project,
@@ -10,15 +10,15 @@ This is clean template for use as base to new SPA project.
  * [TODO] **Unit tests** with **Jest** and official vue-test-utils
  * **Functional tests** with **Testcafe** + testcate-vue-selectors for grabbing components by their names
  * **Eslint** with AirBNB ruleset,
+ * [TODO] Choose proper soure maps generation method ('source-map', 'eval') that depends on current environment,
+ * [TODO] Minification,
+ * [TODO] PostCSS support,
+ * [TODO] Inline CSS styles in development mode due for hot reloading,
+ * [TODO] Paths aliasing for components, mixins, filters etc.,
+ * [TODO] Webpack Dashboard,
  * [TODO] Vue-router,
  * [TODO] Vuex,
  * [TODO] Simple translation mechanism (trans filter and global method) with use of yaml files as dictionaries,
- * [TODO] Choose proper soure maps generation method ('source-map', 'eval') that depends to current environment,
- * [TODO] Minification,
- * [TODO] PostCSS support,
- * [TODO] Prevent extracting CSS styles in development mode due to blocking hot reloading feature,
- * [TODO] Path aliasing for components, mixins, filters etc.,
- * [TODO] Webpack Dashboard,
 
 ## Usage
 ___npm run dev___ - Run project in development mode with hot reloading support,
