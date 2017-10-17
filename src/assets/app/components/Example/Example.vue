@@ -1,5 +1,6 @@
 <template lang="pug">
 div(:class="{'bold': bold}")
+  div {{ message }}
   span
     slot(v-if="!hidden")
   br
@@ -15,6 +16,10 @@ export default {
       required: false,
       type: Boolean,
       default: false,
+    },
+    message: {
+      reuired: true,
+      type: String,
     },
   },
   data() {

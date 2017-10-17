@@ -1,6 +1,6 @@
 <template lang="pug">
 div
-  example(:bold="true") This is example component!
+  example(:bold="true" :message="value") This is example component!
 </template>
 
 <style lang="stylus" src="./Application.styl"></style>
@@ -11,6 +11,11 @@ import Example from '../Example';
 export default {
   components: {
     Example,
+  },
+  data() {
+    return {
+      value: 'This is example data',
+    };
   },
 };
 </script>

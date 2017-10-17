@@ -35,4 +35,6 @@ test('Grab Title component', async (t) => {
     // Expect Example component to show innerText
     .expect(Example.child('span').innerText)
     .eql('This is example component!');
+
+  await t.wait(60000);
 });
