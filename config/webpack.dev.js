@@ -1,4 +1,5 @@
 const merge = require('webpack-merge');
+const DashboardPlugin = require('webpack-dashboard/plugin');
 const common = require('./webpack.common.js');
 const path = require('path');
 
@@ -27,6 +28,9 @@ module.exports = merge(common(options), {
     // Expose compiled directory as root via http
     contentBase: `${options.rootDir}/compiled`,
   },
+  plugins: [
+    new DashboardPlugin(),
+  ],
   // Choose eval-source-map as slower but more precise debugging tool (modules, original sources)
   devtool: 'eval-source-map',
 });

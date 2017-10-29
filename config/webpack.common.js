@@ -1,6 +1,7 @@
 const CleanupPlugin = require('webpack-cleanup-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlPlugin = require('html-webpack-plugin');
+const AutoPrefixer = require('autoprefixer');
+const MediaPacker = require('css-mqpacker');
 
 module.exports = ({ rootDir, styleLoaders }) => {
   return {
@@ -17,6 +18,7 @@ module.exports = ({ rootDir, styleLoaders }) => {
         {
           test: /\.(js|vue)$/,
           enforce: 'pre',
+          exclude: /node_modules/,
           loader: 'eslint-loader',
         },
         {
@@ -29,6 +31,15 @@ module.exports = ({ rootDir, styleLoaders }) => {
           loader: 'vue-loader',
           options: {
             loaders: styleLoaders,
+            postcss: [
+              AutoPrefixer({
+                browsers: [
+                  'last 3 versions',
+                  'not IE < 11',
+                ],
+              }),
+              MediaPacker(),
+            ],
           },
         },
         {

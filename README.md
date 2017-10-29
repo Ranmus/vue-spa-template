@@ -12,10 +12,10 @@ This is clean template for use as a base to new SPA project.
  * **Eslint** with AirBNB ruleset,
  * Devtools: source-map for production and eval-source-map for development
  * Minification: UglifyJS,
- * [TODO] PostCSS support,
+ * PostCSS support for Vue component files,
  * Inline CSS styles in development mode due for hot reloading,
  * [TODO] Paths aliasing for components, mixins, filters etc.,
- * [TODO] Webpack Dashboard,
+ * Webpack Dashboard in development mode,
  * [TODO] Docs custom block in Vue files,
  * [TODO] Vue-router,
  * [TODO] Vuex,
