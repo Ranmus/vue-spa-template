@@ -6,14 +6,14 @@ This is clean template for use as a base to new SPA project.
  * Vue component files supported,
  * **Plain HTML** and **Pug** templates supported,
  * **Plain CSS** and **Stylus** supported,
- * **Ecmascript 2015-2017** (5-7) features through Babel transpilation (+ Babel-polyfill for support old browsers)
+ * **Ecmascript 2015-2017** (5-7) features through Babel transpilation (+ Babel-polyfill for old browsers support)
  * [TODO] **Unit tests** with **Jest** and official vue-test-utils
  * **Functional tests** with **Testcafe** + testcate-vue-selectors for grabbing components by their names
  * **Eslint** with AirBNB ruleset,
- * [TODO] Choose proper soure maps generation method ('source-map', 'eval') that depends on current environment,
- * [TODO] Minification,
+ * Devtools: source-map for production and eval-source-map for development
+ * Minification: UglifyJS,
  * [TODO] PostCSS support,
- * [TODO] Inline CSS styles in development mode due for hot reloading,
+ * Inline CSS styles in development mode due for hot reloading,
  * [TODO] Paths aliasing for components, mixins, filters etc.,
  * [TODO] Webpack Dashboard,
  * [TODO] Docs custom block in Vue files,

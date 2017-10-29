@@ -1,15 +1,10 @@
 const CleanupPlugin = require('webpack-cleanup-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlPlugin = require('html-webpack-plugin');
-const path = require('path');
 
-module.exports = () => {
+module.exports = ({ rootDir, styleLoaders }) => {
   return {
-    entry: './src/assets/entry.js',
-    output: {
-      path: path.resolve(__dirname, 'compiled'),
-      filename: '[name].[chunkhash].bundle.js',
-    },
+    entry: `${rootDir}/src/assets/entry.js`,
     resolve: {
       alias: {
         vue$: 'vue/dist/vue.esm.js',
@@ -33,14 +28,7 @@ module.exports = () => {
           test: /\.vue$/i,
           loader: 'vue-loader',
           options: {
-            loaders: {
-              css: ExtractTextPlugin.extract({
-                use: 'css-loader',
-              }),
-              stylus: ExtractTextPlugin.extract({
-                use: 'css-loader!stylus-loader',
-              }),
-            },
+            loaders: styleLoaders,
           },
         },
         {
@@ -49,37 +37,20 @@ module.exports = () => {
         },
         {
           test: /\.css$/i,
-          loader: ExtractTextPlugin.extract({
-            use: 'css-loader',
-          }),
+          loader: styleLoaders.css,
         },
         {
           test: /\.styl?$/i,
-          loader: ExtractTextPlugin.extract({
-            use: 'css-loader!stylus-loader',
-          }),
+          loader: styleLoaders.stylus,
         },
       ],
     },
     plugins: [
       new CleanupPlugin(),
-      new ExtractTextPlugin({
-        filename: '[name].[hash].css',
-      }),
       new HtmlPlugin({
-        filename: './index.html',
-        template: './src/assets/index.pug',
+        filename: `${rootDir}/compiled/index.html`,
+        template: `${rootDir}/src/assets/index.pug`,
       }),
     ],
-    devServer: {
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-      },
-      overlay: {
-        warnings: false,
-        errors: true,
-      },
-    },
   };
 };
-

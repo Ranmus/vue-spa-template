@@ -1,6 +1,6 @@
 {
   "name": "vue-spa-template",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "Simple template for use as base to new SPA project.",
   "author": {
     "name": "Lukasz Strzyzowski",
@@ -8,9 +8,9 @@
     "email": "lukaszstr@gmail.com"
   },
   "scripts": {
-    "build": "webpack",
-    "dev": "webpack-dev-server",
-    "tests:functional": "./node_modules/testcafe/bin/testcafe-with-v8-flag-filter.js chrome"
+    "build": "webpack --config ./config/webpack.prod.js",
+    "dev": "webpack-dev-server --open --config ./config/webpack.dev.js",
+    "test:functional": "./node_modules/testcafe/bin/testcafe-with-v8-flag-filter.js chrome"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -33,12 +33,14 @@
     "stylus-loader": "^3.0.1",
     "testcafe": "^0.18.2",
     "testcafe-vue-selectors": "^2.0.0",
+    "uglifyjs-webpack-plugin": "^1.0.1",
     "vue-loader": "^13.3.0",
     "vue-style-loader": "^3.0.3",
     "vue-template-compiler": "^2.5.2",
     "webpack": "^3.7.1",
     "webpack-cleanup-plugin": "^0.5.1",
-    "webpack-dev-server": "^2.9.1"
+    "webpack-dev-server": "^2.9.1",
+    "webpack-merge": "^4.1.0"
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
